@@ -1,0 +1,9 @@
+{
+  "type": "clothing_tops",
+  "version": "2.0",
+  "format": "GLB",
+  "description": "Modelo 3D básico - clothing_tops",
+  "geometry": "box_basic",
+  "materials": "standard",
+  "animation": "static_t_pose"
+}

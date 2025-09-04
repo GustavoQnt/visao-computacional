@@ -1,0 +1,10 @@
+# Este é um arquivo GLB básico para demonstração
+# Em um ambiente real, este seria um modelo 3D real exportado do Blender ou similar
+# Por enquanto, criamos um placeholder que será interpretado pelo frontend
+
+# Modelo básico de avatar unissex
+# Formato: GLB (GL Binary)
+# Versão: 2.0
+# Geometria: Box básico com proporções humanas neutras
+# Textura: Material padrão
+# Animação: T-pose estática

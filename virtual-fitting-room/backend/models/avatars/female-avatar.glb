@@ -1,0 +1,9 @@
+{
+  "type": "avatar_female",
+  "version": "2.0",
+  "format": "GLB",
+  "description": "Modelo 3D básico - avatar_female",
+  "geometry": "box_basic",
+  "materials": "standard",
+  "animation": "static_t_pose"
+}

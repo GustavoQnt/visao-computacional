@@ -1,0 +1,9 @@
+{
+  "type": "avatar_male",
+  "version": "2.0",
+  "format": "GLB",
+  "description": "Modelo 3D básico - avatar_male",
+  "geometry": "box_basic",
+  "materials": "standard",
+  "animation": "static_t_pose"
+}

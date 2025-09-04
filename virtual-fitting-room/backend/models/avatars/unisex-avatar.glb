@@ -1,0 +1,9 @@
+{
+  "type": "avatar_unisex",
+  "version": "2.0",
+  "format": "GLB",
+  "description": "Modelo 3D básico - avatar_unisex",
+  "geometry": "box_basic",
+  "materials": "standard",
+  "animation": "static_t_pose"
+}

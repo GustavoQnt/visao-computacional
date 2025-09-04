@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # Backend FastAPI
+  virtual-fitting-backend:
+    build: ./backend
+    ports:
+      - "8001:8000"  # Mudando para porta 8001
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./backend:/app
+      - ./models:/app/models
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - virtual-fitting-network
+
+  # Frontend React
+  virtual-fitting-frontend:
+    build: ./frontend
+    ports:
+      - "3001:80"  # Mudando para porta 3001
+    depends_on:
+      - virtual-fitting-backend
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - virtual-fitting-network
+
+networks:
+  virtual-fitting-network:
+    driver: bridge
+
+volumes:
+  models-data:
