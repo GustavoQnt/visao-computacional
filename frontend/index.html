@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload de Imagens - Serviço de Edição</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Serviço de Edição de Imagens</h1>
+    <p>Faça upload de uma imagem para remover ou substituir o fundo</p>
+
+    <div class="upload-section">
+      <form id="uploadForm" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="imageInput">Selecione uma imagem:</label>
+          <input type="file" id="imageInput" name="file" accept=".jpg,.jpeg,.png" required>
+        </div>
+
+        <div class="form-group">
+          <label for="removeBackground">
+            <input type="checkbox" id="removeBackground" name="remove_background">
+            Remover fundo da imagem
+          </label>
+        </div>
+
+        <div class="form-group" id="backgroundSection" style="display: none;">
+          <label for="backgroundInput">Imagem de fundo (opcional):</label>
+          <input type="file" id="backgroundInput" name="background" accept=".jpg,.jpeg,.png">
+        </div>
+
+        <button type="submit" id="submitBtn">Processar Imagem</button>
+      </form>
+    </div>
+
+    <div id="previewSection" class="preview-section" style="display: none;">
+      <h3>Resultado:</h3>
+      <div class="image-comparison">
+        <div class="image-item">
+          <h4>Imagem Original</h4>
+          <img id="originalImage" alt="Imagem original">
+        </div>
+        <div class="image-item">
+          <h4>Imagem Processada</h4>
+          <img id="processedImage" alt="Imagem processada">
+        </div>
+      </div>
+      <button id="downloadBtn" style="display: none;">Baixar Imagem Processada</button>
+    </div>
+
+    <div id="loading" class="loading" style="display: none;">
+      <div class="spinner"></div>
+      <p>Processando imagem...</p>
+    </div>
+
+    <div id="error" class="error" style="display: none;"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
